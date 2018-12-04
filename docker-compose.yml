@@ -1,0 +1,12 @@
+app-web:  
+  build: ./web
+  ports:
+    - "8081:8080"
+  links:
+    - app-db
+
+app-db:  
+  build: ./db
+  expose:
+    - "5432"
+
